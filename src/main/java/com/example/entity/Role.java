@@ -9,7 +9,6 @@ public class Role {
 
     @Id
     private String roleID;
-    @Column(name = "rolename")
     private String roleName;
 
     @OneToMany(mappedBy = "role",fetch = FetchType.LAZY)

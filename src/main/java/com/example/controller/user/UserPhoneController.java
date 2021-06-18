@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/user/phone")
+@RequestMapping("/api/phone")
 public class UserPhoneController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class UserPhoneController {
     public Object get(){
         try {
             List<PhoneDTO> listPhone = phoneService.getAll();
-            return new ResponseEntity<Object>(HttpStatus.OK);
+            return new ResponseEntity<Object>(listPhone, HttpStatus.OK);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);

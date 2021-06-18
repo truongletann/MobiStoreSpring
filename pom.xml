@@ -78,13 +78,11 @@
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>2.5.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>9.2.1.jre8</version>
+            <scope>runtime</scope>
         </dependency>
-
 
     </dependencies>
 
@@ -93,7 +91,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${parent.version}</version>
+<!--                <version>${parent.version}</version>-->
             </plugin>
         </plugins>
     </build>

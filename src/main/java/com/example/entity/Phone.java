@@ -6,6 +6,7 @@ import java.util.List;
 @Entity
 @Table(name = "tblPhones")
 public class Phone {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int phoneID;

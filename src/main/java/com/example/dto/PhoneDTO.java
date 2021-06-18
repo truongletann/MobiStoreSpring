@@ -5,7 +5,7 @@ import javax.validation.constraints.NotEmpty;
 public class PhoneDTO {
 
     private int phoneID;
-    @NotEmpty(message = "Please enter phone name !")
+//    @NotEmpty(message = "Please enter phone name !")
     private String phoneName;
     private float price;
     private String uniStock;
