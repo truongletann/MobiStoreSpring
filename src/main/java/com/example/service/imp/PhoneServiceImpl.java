@@ -1,6 +1,6 @@
 package com.example.service.imp;
 
-import com.example.dto.PhoneDTO;
+import com.example.dto.PhoneUserDTO;
 import com.example.entity.Phone;
 import com.example.repository.PhoneRepository;
 import com.example.service.PhoneService;
@@ -17,15 +17,9 @@ public class PhoneServiceImpl implements PhoneService {
 
 
     @Override
-    public List<PhoneDTO> getAll() {
-        List<PhoneDTO> dtos = new ArrayList<PhoneDTO>();
-            List<Phone> entities = phoneRepository.findAll();
-            for (Phone phone: entities) {
-                dtos.add(new PhoneDTO(phone.getPhoneName()));
-            }
-
+    public List<PhoneUserDTO> getAll() {
+        List<PhoneUserDTO> dtos = phoneRepository.getPhoneUser();
         return dtos;
-
     }
 
 //    public static void main(String[] args) {

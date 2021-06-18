@@ -12,10 +12,9 @@ public class Phone {
     private int phoneID;
     private String phoneName;
     private float price;
-    private String uniStock;
     private String description;
     private String manufacturer;
-    private String condition;
+    private String itemCode;
     private int quantity;
     private String imageFile;
     private String typeID;
@@ -31,19 +30,18 @@ public class Phone {
     public Phone() {
     }
 
-    public Phone(int phoneID, String phoneName, float price, String uniStock, String description, String manufacturer, String condition, int quantity, String imageFile, String typeID, boolean isDelete, TypePhone typePhone) {
+    public Phone(int phoneID, String phoneName, float price, String description, String manufacturer, String itemCode, int quantity, String imageFile, String typeID, boolean isDelete) {
         this.phoneID = phoneID;
         this.phoneName = phoneName;
         this.price = price;
-        this.uniStock = uniStock;
         this.description = description;
         this.manufacturer = manufacturer;
-        this.condition = condition;
+        this.itemCode = itemCode;
         this.quantity = quantity;
         this.imageFile = imageFile;
         this.typeID = typeID;
         this.isDelete = isDelete;
-        this.typePhone = typePhone;
+
     }
 
     public int getPhoneID() {
@@ -70,14 +68,6 @@ public class Phone {
         this.price = price;
     }
 
-    public String getUniStock() {
-        return uniStock;
-    }
-
-    public void setUniStock(String uniStock) {
-        this.uniStock = uniStock;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -94,12 +84,12 @@ public class Phone {
         this.manufacturer = manufacturer;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getItemCode() {
+        return itemCode;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setItemCode(String itemCode) {
+        this.itemCode = itemCode;
     }
 
     public int getQuantity() {
@@ -140,5 +130,13 @@ public class Phone {
 
     public void setTypePhone(TypePhone typePhone) {
         this.typePhone = typePhone;
+    }
+
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
     }
 }

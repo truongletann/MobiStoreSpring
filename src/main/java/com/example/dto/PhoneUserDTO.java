@@ -2,27 +2,34 @@ package com.example.dto;
 
 import javax.validation.constraints.NotEmpty;
 
-public class PhoneDTO {
+public class PhoneUserDTO {
 
     private int phoneID;
 //    @NotEmpty(message = "Please enter phone name !")
     private String phoneName;
     private float price;
-    private String uniStock;
     private String description;
     private String manufacturer;
-    private String condition;
+    private String itemCode;
     private int quantity;
     private String imageFile;
     private String typeID;
-    private String typeNameName;
-    private boolean isDelete;
+    private String typeName;
 
-    public PhoneDTO() {
+    public PhoneUserDTO() {
     }
 
-    public PhoneDTO(String phoneName) {
+    public PhoneUserDTO(int phoneID, String phoneName, float price, String description, String manufacturer, String itemCode, int quantity, String imageFile, String typeID, String typeName) {
+        this.phoneID = phoneID;
         this.phoneName = phoneName;
+        this.price = price;
+        this.description = description;
+        this.manufacturer = manufacturer;
+        this.itemCode = itemCode;
+        this.quantity = quantity;
+        this.imageFile = imageFile;
+        this.typeID = typeID;
+        this.typeName = typeName;
     }
 
     public int getPhoneID() {
@@ -49,14 +56,6 @@ public class PhoneDTO {
         this.price = price;
     }
 
-    public String getUniStock() {
-        return uniStock;
-    }
-
-    public void setUniStock(String uniStock) {
-        this.uniStock = uniStock;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -71,14 +70,6 @@ public class PhoneDTO {
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-    }
-
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
     }
 
     public int getQuantity() {
@@ -105,19 +96,4 @@ public class PhoneDTO {
         this.typeID = typeID;
     }
 
-    public String getTypeNameName() {
-        return typeNameName;
-    }
-
-    public void setTypeNameName(String typeNameName) {
-        this.typeNameName = typeNameName;
-    }
-
-    public boolean isDelete() {
-        return isDelete;
-    }
-
-    public void setDelete(boolean delete) {
-        isDelete = delete;
-    }
 }

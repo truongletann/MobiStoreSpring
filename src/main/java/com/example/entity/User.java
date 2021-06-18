@@ -10,7 +10,6 @@ import java.util.List;
 public class User {
     @Id
     private String userID;
-    @Column(name = "fullname")
     private String fullName;
     private String password;
     private String roleID;

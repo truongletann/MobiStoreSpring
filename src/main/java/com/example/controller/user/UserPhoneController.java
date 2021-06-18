@@ -1,6 +1,6 @@
 package com.example.controller.user;
 
-import com.example.dto.PhoneDTO;
+import com.example.dto.PhoneUserDTO;
 import com.example.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class UserPhoneController {
     @GetMapping("")
     public Object get(){
         try {
-            List<PhoneDTO> listPhone = phoneService.getAll();
+            List<PhoneUserDTO> listPhone = phoneService.getAll();
             return new ResponseEntity<Object>(listPhone, HttpStatus.OK);
         }catch (Exception e){
             e.printStackTrace();
