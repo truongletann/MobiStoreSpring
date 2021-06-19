@@ -14,7 +14,6 @@ public class Phone {
     private float price;
     private String description;
     private String manufacturer;
-    private String itemCode;
     private int quantity;
     private String imageFile;
     private String typeID;
@@ -30,18 +29,27 @@ public class Phone {
     public Phone() {
     }
 
-    public Phone(int phoneID, String phoneName, float price, String description, String manufacturer, String itemCode, int quantity, String imageFile, String typeID, boolean isDelete) {
+    public Phone(int phoneID, String phoneName, float price, String description, String manufacturer, int quantity, String imageFile, String typeID, boolean isDelete) {
         this.phoneID = phoneID;
         this.phoneName = phoneName;
         this.price = price;
         this.description = description;
         this.manufacturer = manufacturer;
-        this.itemCode = itemCode;
         this.quantity = quantity;
         this.imageFile = imageFile;
         this.typeID = typeID;
         this.isDelete = isDelete;
+    }
 
+    public Phone(String phoneName, float price, String description, String manufacturer, int quantity, String imageFile, String typeID, boolean isDelete) {
+        this.phoneName = phoneName;
+        this.price = price;
+        this.description = description;
+        this.manufacturer = manufacturer;
+        this.quantity = quantity;
+        this.imageFile = imageFile;
+        this.typeID = typeID;
+        this.isDelete = isDelete;
     }
 
     public int getPhoneID() {
@@ -82,14 +90,6 @@ public class Phone {
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-    }
-
-    public String getItemCode() {
-        return itemCode;
-    }
-
-    public void setItemCode(String itemCode) {
-        this.itemCode = itemCode;
     }
 
     public int getQuantity() {

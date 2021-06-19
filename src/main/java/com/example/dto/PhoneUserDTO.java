@@ -1,16 +1,23 @@
 package com.example.dto;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 public class PhoneUserDTO {
 
     private int phoneID;
-//    @NotEmpty(message = "Please enter phone name !")
+    @NotEmpty(message = "Please Enter Phone Name !")
     private String phoneName;
+//    @Size(value=1, message= "whatever")
+//    @Size(value = 1, message = "Please Enter Price !")
+//    @NotBlank
     private float price;
+    @NotEmpty(message = "Please Enter Description !")
     private String description;
+    @NotEmpty(message = "Please Enter Manufacturer !")
     private String manufacturer;
-    private String itemCode;
+//    @NotEmpty(message = "Please Enter Units In Stock !")
     private int quantity;
     private String imageFile;
     private String typeID;
@@ -19,13 +26,12 @@ public class PhoneUserDTO {
     public PhoneUserDTO() {
     }
 
-    public PhoneUserDTO(int phoneID, String phoneName, float price, String description, String manufacturer, String itemCode, int quantity, String imageFile, String typeID, String typeName) {
+    public PhoneUserDTO(int phoneID, String phoneName, float price, String description, String manufacturer, int quantity, String imageFile, String typeID, String typeName) {
         this.phoneID = phoneID;
         this.phoneName = phoneName;
         this.price = price;
         this.description = description;
         this.manufacturer = manufacturer;
-        this.itemCode = itemCode;
         this.quantity = quantity;
         this.imageFile = imageFile;
         this.typeID = typeID;
