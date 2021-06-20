@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/pay")
+@RequestMapping("/api/user/pay")
 @Transactional(rollbackOn = Exception.class)
 public class UserCheckOurController {
 
