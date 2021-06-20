@@ -24,7 +24,7 @@ public class FileServiceImpl implements FileService {
 
             Files.write(filePath, file.getBytes());
 
-            return "/"+uploadDir+fileName;
+            return fileName;
         } catch (IOException e) {
             e.printStackTrace();
         }

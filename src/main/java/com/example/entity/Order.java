@@ -12,7 +12,6 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderID;
     private String userID;
     private float totalPrice;
@@ -30,13 +29,17 @@ public class Order {
     public Order() {
     }
 
-    public Order(int orderID, String userID, float totalPrice, Date dateBuy, User user, List<OrderDetail> orderDetails) {
+    public Order(int orderID, String userID, float totalPrice, Date dateBuy) {
         this.orderID = orderID;
         this.userID = userID;
         this.totalPrice = totalPrice;
         this.dateBuy = dateBuy;
-        this.user = user;
-        this.orderDetails = orderDetails;
+    }
+
+    public Order(String userID, float totalPrice, Date dateBuy) {
+        this.userID = userID;
+        this.totalPrice = totalPrice;
+        this.dateBuy = dateBuy;
     }
 
     public int getOrderID() {

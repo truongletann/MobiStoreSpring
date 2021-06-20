@@ -1,4 +1,4 @@
-package com.example.controller.user;
+package com.example.controller;
 
 import com.example.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;

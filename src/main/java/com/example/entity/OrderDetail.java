@@ -22,11 +22,19 @@ public class OrderDetail {
     @JoinColumn(name = "phoneID", insertable = false, updatable = false)
     private Phone phone;
 
-    public OrderDetail() {
+    public OrderDetail(int random_int, int phoneID, int quantity, float price) {
     }
 
     public OrderDetail(int detailID, int orderID, int phoneID, int quantity, float price, Order order, Phone phone) {
         this.detailID = detailID;
+        this.orderID = orderID;
+        this.phoneID = phoneID;
+        this.quantity = quantity;
+        this.price = price;
+        this.order = order;
+        this.phone = phone;
+    }
+    public OrderDetail(int orderID, int phoneID, int quantity, float price, Order order, Phone phone) {
         this.orderID = orderID;
         this.phoneID = phoneID;
         this.quantity = quantity;

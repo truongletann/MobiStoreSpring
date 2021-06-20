@@ -1,12 +1,12 @@
 package com.example.controller.user;
 
 import com.example.dto.PhoneUserDTO;
+import com.example.repository.PhoneRepository;
 import com.example.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -17,6 +17,9 @@ public class UserPhoneController {
 
     @Autowired
     PhoneService phoneService;
+
+    @Autowired
+    PhoneRepository phoneRepository;
 
     @GetMapping("")
     public Object get(){
@@ -53,16 +56,5 @@ public class UserPhoneController {
         }
     }
 
-//    @PostMapping("")
-//    public Object post(@RequestParam MultipartFile file,@Valid @RequestBody PhoneUserDTO phoneUserDTO) {
-//        try {
-//            phoneService.add(phoneUserDTO,file);
-//            return new ResponseEntity<Object>(HttpStatus.CREATED);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
-//
-//        }
-//    }
+
 }
